@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Valle Maira">
+		<meta name="author" content="Nicolò Mandrile">
+		<title>Valle Maira Mon Amour</title>
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/ab1c7e33a2.js" crossorigin="anonymous"></script>
+
+		<!-- Custom styles for this template -->
+		<link href="css/style.css" rel="stylesheet">
+
+	</head>
+				<script>
+
+
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  const uluru = { lat: 44.517395780638324, lng: 7.1324468403472014 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}
+
+</script>
+<style>
+
+</style>
+	<body id="page-top" lang="it">
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse id="bs-example-navbar-collapse-1">
+
+					<ul class="nav navbar-nav navbar-right">
+
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#about"><p class="text-white"><strong id="aboutLink">Scopri</strong></p></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#tour"><p class="text-white"><strong>Tour</strong></p></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#photo"><p class="text-white"><strong id="fotoLink">Foto</strong></p></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#contact"><p class="text-white"><strong id="contattiLink">Contatti</strong></p></a>
+						</li>
+						<li>
+						<div class="form-group" style="margin-top:1em">
+							<select class="form control" id="selectLang" onchange="changeLanguage()"> 
+								<option selected>Italiano</option>
+								<option>English</option>
+							</select>
+						</div>
+
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!-- Header -->
+		<header>			
+				<div class="video-container">
+					<video autoplay muted loop id="myVideo">
+					  <source src="video/fremo2.mp4" type="video/mp4">
+					</video>
+					<div class="caption">
+					<div class="intro-text">
+						<div class="intro-lead-in" id="titoletto">Vivi giorni indimenticabili in MTB tra montagne, arte e tradizione!</div>
+						<div class="intro-heading">VALLE MAIRA MON AMOUR</div>
+						<br>
+						<div class="d-flex justify-content-center"><a style="position:center;"
+						target="_blank"  href="http://www.alpesdoc.com/it/"><img src="images/AlpesDoc.png" alt="Alpes D'Oc"></a></div>
+
+					</div>
+					</div>
+				</div>
+		</header>
+		<section id="about" class="light-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="section-title">
+							<h2>VALLE MAIRA</h2>
+							<p id="valleMaira">La valle Maira è lunga e stretta, selvaggia e incontaminata. <br>Essa nasconde tra le sue vette alcune perle, tra antiche chiese a picco nel vuoto, borgate sperdute e panorami mozzafiato.<br>
+							Viaggia con noi alla scoperta di questi luoghi, spersi tra cielo e montagne, per perdersi nei suo colori e nei suoi sapori, tra cultura e tradizioni. <br>
+							Un viaggio in luoghi in cui il tempo sembra essersi fermato, un viaggio per divertirsi, rilassarsi e per tornare a meravigliarsi!</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- about module -->
+					<div class="col-md-3 text-center">
+						<div class="mz-module-about">
+							<i class="fa fa-photo ot-circle"></i>
+							<h3 id="montagneTitle">Montagne</h3>
+							<p id="montagneTesto">Lassù tra le montagne, diventa tutto più facile... anche essere felici!</p>
+						</div>
+					</div>
+					<!-- end about module -->
+					<!-- about module -->
+					<div class="col-md-3 text-center">
+						<div class="mz-module-about">
+							<i class="fa fa-bank ot-circle"></i>
+							<h3 id="culturaTitle">Cultura</h3>
+							<p id="culturaTesto">Borgate, Chiese, musei e affreschi, alla scoperta di perle nascoste della Valle Maira.</p>
+						</div>
+					</div>
+					<!-- end about module -->
+					<!-- about module -->
+					<div class="col-md-3 text-center">
+						<div class="mz-module-about">
+							<i class="fa fa-camera-retro ot-circle"></i>
+							<h3 id="fotoTitle">Fotografia</h3>
+							<p id="fotoTesto">Panorami incredibili, impossibili da dimenticare, impossibili da non fotografare.</p>
+						</div>
+					</div>
+					<!-- end about module -->
+					<!-- about module -->
+					<div class="col-md-3 text-center">
+						<div class="mz-module-about">
+							<i class="fa fa-cutlery ot-circle"></i>
+							<h3 id="gastronomiaTitle">Gastronomia</h3>
+							<p id="gastronomiaTesto">Profumi e sapori, alla scoperta della tradizione e della gastronomia locale.</p>
+						</div>
+					</div>
+					<!-- end about module -->
+				</div>
+			</div>
+			<!-- /.container -->
+		</section>
+
+			<section id="tour">
+		<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="intro-text intro-lead-in">
+						<h2 id="tourTitle">La nostra selezione di tour, divisi per difficoltà e numero di giorni</h2><br><br>
+					</div>
+				</div>
+			</div>
+		<div class ="container row">
+		<div class="col-sm-2"></div>
+	<div class="col-sm-3 container d-flex justify-content-center">
+		<div class="card"> <img src="images/tizi2.jpg" class="imgCard" height="300" width="500">
+			<div class="text-white">
+				Per tutti
+			</div>
+			<br>
+			<div class="text-muted" >
+				<p style="color:white">Tour in E-MTB adatto a principianti!</p>
+				<br>
+				<button type="button" class="btn btn-primary center"><span>Scopri di più</span></button>
+
+			</div>
+		</div>
+	</div>		
+	<div class="col-sm-4"></div>
+
+	<div class="col-sm-3 container d-flex justify-content-center">
+		<div class="card"> <img src="images/verde1.jpg" class="imgCard" height="300" width="500">
+			<div class="text-white">
+				Per esperti
+			</div>
+			<div class="text-muted">
+				<p style="color:white">Tour difficile, per chi ha esperienza di guida in MTB</p>
+				<button type="button" class="btn btn-primary center"><span>Scopri di più</span></button>
+
+			</div>
+		</div>
+	</div>	
+	</div>
+		</section>
+
+		<section id="photo" class="light-bg">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="intro-text intro-lead-in">
+						<h2 id="fotoQuote">Una foto non scattata è un ricordo che non c’è!<br>Ricordati di ricordare!</h2><br>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item"  onclick="openInModal(this)">
+						<figure class="effect-bubba">
+							<img src="images/fremoup169.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Fremo Cuncunà</h2>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item"  onclick="openInModal(this)">
+						<figure class="effect-bubba">
+							<img src="images/croce.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Panorami</h2>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4"   >
+					<div class="ot-portfolio-item"  onclick="openInModal(this)">
+						<figure class="effect-bubba" >
+							<img src="images/picnic.jpg" alt="img02" class="img-responsive"/>
+							<figcaption>
+								<h2>PIC-NIC</h2>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+			</div>
+			<div class="row">
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item"  onclick="openInModal(this)">
+						<figure class="effect-bubba">
+							<img src="images/meya.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Rocca la Meya</h2>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item"  onclick="openInModal(this)">
+						<figure class="effect-bubba">
+							<img src="images/santamaria.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Santa Maria di Morinesio</h2>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item"  onclick="openInModal(this)">
+						<figure class="effect-bubba">
+							<img src="images/nuvole.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>CLOUDS</h2>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+			</div>
+			</div><!-- end container -->
+		</section>
+
+		<section id="contact"  class="">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="section-title">
+							<h2 id="contattiTitolo">Contattaci</h2>
+							<p id="testoContatti">Ecco i nostri contatti per prenotazioni ed ulteriori informazioni!</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+
+					<div class="col-md-4">
+						<div class="profile-card-4 text-center"><img src="images/verde1.jpg" class="img img-responsive">
+							<div class="profile-content">
+								<div class="profile-name">Nicolò Mandrile
+								   
+								</div>
+								<div class="profile-description">
+								<p>Nato e cresciuto in Valle Maira, è accompagnatore cicloturistico dal 2018 e istruttore di MTB dal 2021 con  <a href="http://www.amibike.com">AmiBike</a></p>
+
+								<p><i class="fa fa-phone"></i> +39 3343332773</p>
+											<p><i class="fa fa-envelope"></i> nicolo.mandrile@gmail.com</p></div>
+											
+											 <div class="profile-icons">
+											 <a href="https://www.facebook.com/nicolo.mandrile/"><i class="fa fa-facebook"></i></a>
+											 <a href="https://www.strava.com/athletes/13916302"><i class="fab fa-strava"></i></a>
+											 <a href="https://www.instagram.com/nicolomandrile/"><i class="fa fa-instagram"></i></a></div>
+						</div>
+							   
+							</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="profile-card-4 text-center"><img src="images/alpesdoc.jpg" class="img img-responsive">
+							<div class="profile-content">
+								<div class="profile-name">Alpes D'Oc Morinesio
+								   
+								</div>
+								<div class="profile-description">
+								<p><i class="fa fa-address-card"></i><a style="text-decoration:none;" target="_blank" href=" http://www.alpesdoc.com/it/"> http://www.alpesdoc.com/it/</a></p>
+								<p><i class="fa fa-phone"></i>+39 3487469019  +39 3489047499 +39 011597602</p>
+											<p><i class="fa fa-envelope"></i> morinesio@alpesdoc.com</p></div>
+											 <div class="profile-icons">
+											 <a href="https://www.facebook.com/AlpesdOCMorinesio"><i class="fa fa-facebook"></i></a>
+											 <a href="https://www.instagram.com/alpes_doc_morinesio/"><i class="fab fa-instagram"></i></a></div>
+						</div>
+							   
+							</div>
+							
+					</div>
+					
+				  <div class="col-md-4 form">
+						
+					</div>
+					
+				
+				</div>
+					<br><div class="row col-sm-12">
+					 <div id="map"></div>
+					 		    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly&channel=2" async></script>
+					 </div>
+				</div>
+
+			</div>
+		</section>
+		<p id="back-top">
+			<a href="#top"><i class="fa fa-angle-up"></i></a>
+		</p>
+		<footer>
+			<div class="container text-center">
+				<p>VALLE MAIRA <span class="text-warning"> MON AMOUR </span></p>
+			</div>
+		</footer>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal" onclick="dismissModal()">
+
+  <!-- The Close Button -->
+  <span class="close" onclick="dismissModal()">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content-image img-responsive" id="modalImage" onclick="dismissModal()">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
+		<!-- Bootstrap core JavaScript
+			================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/theme-scripts.js"></script>
+
+		<script>
+
+//MODAL PER ZOOM IMMAGINI
+function openInModal(elem){
+		// Get the modal
+		$("#myModal").modal('show');
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = $(elem).find("img")
+		var captionText = $(elem).find("h2");
+		$('#myModal').modal('show');
+		$("#modalImage").css('display:block');
+		$("#modalImage").attr("src",img[0].src);
+		$("#caption").html(captionText[0].textContent);
+		$(".navbar").hide();
+		$("#back-top").hide();
+}
+	
+function dismissModal()
+{
+	$('#myModal').modal('hide');
+	$(".navbar").show();
+	$("#back-top").show();
+}
+//FINE MODAL PER ZOOM IMMAIGINI
+
+//GESTIONE LINGUE
+$( document ).ready(function() {
+   changeLanguage();
+   manageScroll();
+});
+
+var lang = it;
+var en = {
+    aboutLink: "About",
+    fotoLink: "Pictures",
+    infoLink: "Info and prices",
+    contattiLink: "Contacts",
+    titoletto: "Amazing days in MTB within nature, art and tradition!",
+	scopriLink: "Find more!",
+    valleMaira: "The Maira Valley is long and narrow, wild and pristine.<br>She hides, between her peaks, some gems, as ancient township, churches lost in the mountains with breathtaking panoramas." 
+	+"<br>Travel with us to discover those places, get lost between sky and mountains, get lost absorbed by colors and tastes among culture and traditions."
+	+"<br>A tour in a place where time has stopped, in a time when life was simplier.",
+    montagneTitle: "Mountains",
+	montagneTesto: "Happiness is not at the top of the mountains but in how to climb it.",
+	culturaTitle: "Culture",
+	culturaTesto: "Townships, Churches, museums and paintings, discovering hidden gems in Maira Valley.",
+	fotoTitle: "Pictures",
+	fotoTesto: "Breathtaking panoramas, impossible to forget, impossible not to get excited.",
+	gastronomiaTitle: "Food",
+	gastronomiaTesto: "Aromas and flavors, discovering traditions and local gastronomy.",
+	fotoQuote: "A picture not taken is a lost memory!<br>Remeber to remeber!",
+	testoContatti: "Here our contacts, feel free to get in touch for booking and more informations!",
+	istruttore: "MTB instructor AmiBike",
+	tourTitle: "Our tour collection, divided by difficulty and days number!",
+	infoTour: "The “hard” tours have physically and tecnically hard climbs and descents, and an experience and good ability on a bike is required becouse they present technical single tracks."
+	+"In the “easy“ tours there are not technical difficulties, but as we are in the mountains is mandatory the use of E-MTB if one is not particularry trained."
+	+"Is mandatory the use of MTB or E-MTB, preferably full suspended in perfect conditions. "
+	+"It is mandatory the use of helmet, gloves, goggles and a backpack." 
+	+"We will be in high mountains, so it's important to have suitable clothing for cold and (we hope not) rain!",
+	infoCosti: "All Inclusive per person. Includes:"
+	+"<br>- Lunch “pic nic gourmet” on the fist day" 
+	+"<br>-	Dinner (drinks not included), night and breakfast at Alpes D'Oc Morinesio." 
+	+"<br>-	Lunch on the second day at Rifugio “La Gardetta” (drinks not included)."
+	+"<br>-	MTB guide both days",
+}
+
+var it = {
+    aboutLink: "Scopri",
+    fotoLink: "Foto",
+    infoLink: "Info e costi",
+    contattiLink: "Contatti",
+	titoletto: "Vivi giorni indimenticabili in MTB tra montagne, arte e tradizione!",
+	scopriLink: "Scopri di più!",
+    valleMaira: "La valle Maira è lunga e stretta, selvaggia e incontaminata. <br>Essa nasconde tra le sue vette alcune perle, tra antiche chiese a picco nel vuoto, borgate "
+	+"sperdute e panorami mozzafiato.<br>Viaggia con noi alla scoperta di questi luoghi, spersi tra cielo e montagne, per ritrovarsi nei suo colori e nei suoi sapori,"
+	+" tra cultura e tradizioni. <br>Un viaggio in luoghi in cui il tempo sembra essersi fermato, in un tempo quando la vita era fatta di cose semplici.",
+	montagneTitle: "Montagne",
+	montagneTesto: "Lassù tra le montagne, diventa tutto più facile... anche essere felici!",
+	culturaTitle: "Cultura",
+	culturaTesto: "Borgate, Chiese, musei e affreschi, alla scoperta di perle nascoste della Valle Maira.",
+	fotoTitle: "Fotografia",
+	fotoTesto: "Panorami incredibili, impossibili da dimenticare, impossibili da non fotografare.",
+	gastronomiaTitle: "Gastronomia",
+	gastronomiaTesto: "Profumi e sapori, alla scoperta della tradizione e della gastronomia locale.",
+    fotoQuote: "Una foto non scattata è un ricordo che non c’è!<br>Ricordati di ricordare!",
+    testoContatti: "Ecco i nostri contatti per prenotazioni ed ulteriori informazioni!",
+    istruttore: "Istruttore MTB AmiBike",
+	tourTitle: "La nostra selezione di tour, divisi per difficoltà e numero di giorni",
+	infoTour: "Il tour catalogati come “difficili”, prevedono salite e discese fisicamente impegnative e richiedono una certa abilità, presentando inoltre alcuni tratti tecnici"
+	+"ed esposti in single track che richiedono una buona tecnica di guida ed una certa esperienza. "
+	+"Per i tour catalogati come “facili“ non ci sono particolari difficoltà tecniche, ma, essendo in montagna è comunque necessario l'utilizzo di una E-MTB se non si è particolarmente allenati."
+	+"Necessario l’utilizzo di una MTB o E-MTB, preferibilmente full suspended in ottime condizioni. "
+	+"Obbligatorio l’utilizzo del casco, guanti, occhialini da ciclismo e zaino." 
+	+"Saremo in alta montagna, necessario un abbigliamento adeguato, a cipolla, per ripararsi dal freddo ed eventualmente dalla pioggia!",
+	infoCosti: "Prezzo “All Inclusive” a persona comprensivo di:"
+	+"<br>-	Pranzo “pic nic gourmet” del primo giorno" 
+	+"<br>- Cena del primo giorno  (bevande escluse), notte in agriturismo comprensiva di colazione." 
+	+"<br>- Pranzo del secondo giorno presso il Rifugio “La Gardetta” (bevande escluse)."
+	+"<br>- Guida di MTB per entrambi i giorni.",
+
+}
+
+ function  changeLanguage(){
+	 var lan = $("#selectLang option:selected").val();
+	 if(lan=="Italiano")
+		lang =  it;
+	  else
+		lang=en;
+	
+	//Modifico i testi
+	$("#aboutLink").html(lang.aboutLink);  
+	$("#fotoLink").html(lang.fotoLink);  
+	$("#infoLink").html(lang.infoLink);  
+	$("#contattiLink").html(lang.contattiLink);  
+	$("#titoletto").html(lang.titoletto);  
+	$("#scopriLink").html(lang.scopriLink);  
+	$("#valleMaira").html(lang.valleMaira);  
+	$("#montagneTitle").html(lang.montagneTitle);  
+	$("#montagneTesto").html(lang.montagneTesto);  
+	$("#culturaTitle").html(lang.culturaTitle);  
+	$("#culturaTesto").html(lang.culturaTesto);  
+	$("#fotoTitle").html(lang.fotoTitle);  
+	$("#fotoTesto").html(lang.fotoTesto);  
+	$("#gastronomiaTitle").html(lang.gastronomiaTitle);  
+	$("#gastronomiaTesto").html(lang.gastronomiaTesto);  
+	$("#fotoQuote").html(lang.fotoQuote);  
+	$("#infoTitolo").html(lang.infoLink);  
+	$("#contattiTitolo").html(lang.contattiLink);  
+	$("#testoContatti").html(lang.testoContatti);  
+	$("#istruttore").html(lang.istruttore);  
+	$("#tourTitle").html(lang.tourTitle);  
+	$("#infoTour").html(lang.infoTour);  
+	$("#infoCosti").html(lang.infoCosti);  
+
+  }	
+//FINE GESTIONE LINGUE
+
+
+		</script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="js/ie10-viewport-bug-workaround.js"></script>
+	</body>
+</html>

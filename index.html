@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Valle Maira">
+		<meta name="author" content="Nicolò Mandrile">
+		<title>Valle Maira Mon Amour</title>
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/ab1c7e33a2.js" crossorigin="anonymous"></script>
+		<!-- Custom styles for this template -->
+		<link href="css/style.css" rel="stylesheet">
+		<link rel="import" href="sections/tour.html">
+	<style>
+    </style>
+	</head>
+
+
+	<body id="page-top" lang="it" class="loading overlay">
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							
+					<ul class="nav navbar-nav navbar-left">
+						<li>
+							<br>
+							<p class="page-scroll"><strong><span class="text-white">  VALLE MAIRA</span> <span class="text-warning"> MON AMOUR </span></strong></p>
+						</li>
+					</ul>
+					
+					<ul class="nav navbar-nav navbar-right">
+										
+
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#about"><p class="text-white"><strong id="aboutLink">Scopri</strong></p></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#tour"><p class="text-white"><strong>Tour</strong></p></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#photo"><p class="text-white"><strong id="fotoLink">Foto</strong></p></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#info"><p class="text-white"><strong id="infoLink">Info e costi</strong></p></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#contact"><p class="text-white"><strong id="contattiLink">Contatti</strong></p></a>
+						</li>
+						<li>
+						<div class="form-group" style="margin-top:1em">
+						<a class="flag-icon flag-icon-it" onclick="changeLanguage('it')" href="javascript:void(0);" style="text-decoration:none;cursor:pointer;"></a>
+						<a class="flag-icon flag-icon-gb" onclick="changeLanguage('en')" href="javascript:void(0);" style="text-decoration:none;cursor:pointer;"></a>
+						</div>
+
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!-- Header -->
+		<header>			
+				<div class="video-container container-fluid">
+					<video poster="images/fremoup169.jpg"  preload="auto" autoplay muted loop id="myVideo">
+					  <source src="video/fremo2.mp4" type="video/mp4">
+					</video>
+					<div class="caption">
+					<div class="intro-text">
+						<div class="intro-lead-in" id="titoletto">Un viaggio indimenticabile in MTB!</div>
+						<div class="intro-heading">VALLE MAIRA MON AMOUR</div>
+						<br>
+						<div class="d-flex justify-content-center"><a style="position:center;"
+						target="_blank"  href="http://www.alpesdoc.com/it/"><img src="images/AlpesDoc.png" alt="Alpes DOc"></a></div>
+					</div>
+					</div>
+				</div>
+		</header>
+		<section id="about" class="light-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="">
+						    
+							<h2>VALLE MAIRA</h2>
+							<p id="valleMaira">La valle Maira è lunga e stretta, selvaggia e incontaminata. <br>Essa nasconde tra le sue vette alcune perle, tra antiche chiese a picco nel vuoto, borgate sperdute e panorami mozzafiato.<br>
+							Viaggia con noi alla scoperta di questi luoghi, spersi tra cielo e montagne, per perdersi nei suo colori e nei suoi sapori, tra cultura e tradizioni. <br>
+							Un viaggio in luoghi in cui il tempo sembra essersi fermato, un viaggio per divertirsi, rilassarsi e per tornare a meravigliarsi!</p><br><br>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- about module -->
+					<div class="col-md-3 text-center">
+						<div class="mz-module-about">
+							<i class="fa fa-photo ot-circle"></i>
+							<h3 id="montagneTitle">Montagne</h3>
+							<p id="montagneTesto">Lassù tra le montagne, diventa tutto più facile... anche essere felici!</p>
+						</div>
+					</div>
+					<!-- end about module -->
+					<!-- about module -->
+					<div class="col-md-3 text-center">
+						<div class="mz-module-about">
+							<i class="fa fa-bank ot-circle"></i>
+							<h3 id="culturaTitle">Cultura</h3>
+							<p id="culturaTesto">Borgate, Chiese, musei e affreschi, alla scoperta di perle nascoste della Valle Maira.</p>
+						</div>
+					</div>
+					<!-- end about module -->
+					<!-- about module -->
+					<div class="col-md-3 text-center">
+						<div class="mz-module-about">
+							<i class="fa fa-camera-retro ot-circle"></i>
+							<h3 id="fotoTitle">Fotografia</h3>
+							<p id="fotoTesto">Perché un’immagine vale più di mille parole.</p>
+						</div>
+					</div>
+					<!-- end about module -->
+					<!-- about module -->
+					<div class="col-md-3 text-center">
+						<div class="mz-module-about">
+							<i class="fa fa-cutlery ot-circle"></i>
+							<h3 id="gastronomiaTitle">Gastronomia</h3>
+							<p id="gastronomiaTesto">Profumi e sapori, alla scoperta della tradizione e della gastronomia locale.</p>
+						</div>
+					</div>
+					<!-- end about module -->
+				</div>
+			</div>
+			<!-- /.container -->
+		</section>
+
+
+
+	<section id="tour">
+			<div class="container">
+			    <div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="section-title">
+							<h2 id="ilNostroTourTesto">TOUR</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				
+					<div class="col-md-6">
+					
+						<div class="day-text">
+						<br><br>
+							<p  id="giorno1Testo"><small> Giorno 1</small></p>
+							<h2 id="giorno1TitoloTesto">In viaggio tra Morinesio ed Elva</h2>
+							<p id="giorno1DescrizioneTesto">Il primo giorno ecc ecc <br>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6 container-fluid">
+										<br><br>
+					<br><br>
+					<br><br>
+
+				<div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+						<li data-target="#myCarousel" data-slide-to="4"></li>
+					  </ol>
+
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner" >
+						<div class="item active" onclick="openInModal(this)">
+						  <img src="images/sanmartino.jpg" alt="San Martino">
+						</div>
+
+						<div class="item" onclick="openInModal(this)">
+						  <img src="images/elva.jpg" alt="Elva">
+						</div>
+						 
+						<div class="item" onclick="openInModal(this)">
+						  <img src="images/monti.jpg" alt="Monte Chersogno">
+						</div>
+						
+						<div class="item" onclick="openInModal(this)">
+						  <img src="images/fremomia.jpg" alt="Fremo Cuncuna">
+						</div>
+						
+						<div class="item">
+
+						<div class="embed-responsive embed-responsive-16by9">
+							<video id="video1" width="320" height="240" controls autoplay muted>
+							  <source src="video/ReliveMorinesioElva.mp4" type="video/mp4">
+							</video>			
+						</div>
+						</div>
+					  </div>
+
+					</div>
+										
+					<div>
+						
+						</div>
+						<br>
+					<div class="progress" id="progress1">
+						  <div class="progress-bar progress-bar-striped progress-bar-info salitaTesto" role="progressbar" aria-valuenow="70"
+						  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+							Salita
+						  </div>
+						</div>
+						
+						
+						<div class="progress" id="progress2">
+						  <div class="progress-bar progress-bar-striped progress-bar-success difficoltaTecnicaSalitaTesto" role="progressbar" aria-valuenow="40"
+						  aria-valuemin="0" aria-valuemax="100" style="width:30%">
+							Difficoltà tecnica in salita
+						  </div>
+						</div>
+
+
+						<div class="progress" id="progress3">
+						  <div class="progress-bar progress-bar-striped progress-bar-warning difficoltaTecnicaDiscesaTesto" role="progressbar" aria-valuenow="80"
+						  aria-valuemin="0" aria-valuemax="100" style="width:80%">
+							Difficoltà tecnica discesa
+						  </div>
+						</div>
+
+						
+					</div>
+						
+				</div>
+				<div class="container text-center dark-bg short-section">
+				<div class="row">
+					<div class="col-md-3 mb-sm-30">
+						<div class="counter-item">
+							<h2 data-count="30,9">30,9</h2>
+							<h6>Km</h6>
+						</div>
+					</div>
+					<div class="col-md-3 mb-sm-30">
+						<div class="counter-item">
+							<h2 data-count="1430">1.490m</h2>
+							<h6 class="salitaTesto">Salita</h6>
+						</div>
+					</div>
+					<div class="col-md-3 mb-sm-30">
+						<div class="counter-item">
+							<h2 data-count="1440">1.490m</h2>
+							<h6 class="discesaTesto">Discesa</h6>
+						</div>
+					</div>
+					<div class="col-md-3 mb-sm-30">
+						<div class="counter-item">
+							<h2 data-count="100">100%</h2>
+							<h6 class="divertimentoTesto">Divertimento</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="day-text">
+						<br><br>
+							<p  id="giorno2Testo"><small> Giorno 2</small></p>
+
+							<h2 id="giorno2TitoloTesto">Altopiano della Gardetta</h2>
+							<p id="giorno2DescrizioneTesto">Il secondo giorno vede come palcoscenico della nostra giornata il paradisiaco altopiano della Gardetta. Luogo incantato in cui ci si immerge completamente nella natura e ci si perde negli immensi panorami di solo cielo e montagne. 
+							La partenza è alle ore 8.00 in auto da Morinesio (disponibile, nel caso, il carrello o auto per il trasporto bici). Si scende a Stroppo e si prende la statale in direzione Acceglio. 
+							In località Ponte Marmora si lasciano le auto e si parte per la nostra escursione. 
+							Si iniza con una salita su strada asfaltata con panorami mozzafiato per circa 15 km fino al Colle del Preit (2.080 slm). 
+							Subito, la vista della cima di Rocca La Meya  lascia senza fiato ma è solo l’inizio dell’incredibile altopiano.
+							Si pedala per ancora 4km fino al Rifugio della Gardetta (2.335m slm) dove è previsto il pranzo. 
+							Dopo pranzo in 20 minuti si raggiunge il Passo della Gardetta (2.437m slm) da cui inizia una spettacolare discesa in singletrack nel Vallone dell’Unerzio e, passando 
+							per le borgate di Viviere, Prato Rotondo e Chialvetta, si raggiunge il comune di Acceglio (1.220m slm).<br>
+							1200m di puro divertimento in singletrack!!! Da qua si segue la pista di fondo che affianca la strada statale e si torna a Ponte Marmora dove si conclude la nostra avventura ins
+						    <br>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+					<br><br>
+					<br><br>
+					<br><br>
+					<div id="myCarousel2" class="carousel slide" data-interval="false" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+						<li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel2" data-slide-to="1"></li>
+						<li data-target="#myCarousel2" data-slide-to="2"></li>
+						<li data-target="#myCarousel2" data-slide-to="3"></li>
+						<li data-target="#myCarousel2" data-slide-to="4"></li>
+					  </ol>
+
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+						<div class="item active" onclick="openInModal(this)">
+						  <img src="images/meya.jpg" alt="Rocca la Meya">
+						</div>
+
+						<div class="item" onclick="openInModal(this)">
+						  <img src="images/gardetta.jpg" alt="Gardetta">
+						</div>
+						
+						<div class="item" onclick="openInModal(this)">
+						  <img src="images/meya2.jpg" alt="Rocca la meya">
+						</div>
+						
+						<div class="item" onclick="openInModal(this)">
+						  <img src="images/gardbici.jpg" alt="Gardetta">
+						</div>
+						
+						<div class="item">
+
+						<div class="embed-responsive embed-responsive-16by9">
+							<video id="video2" width="320" height="240" controls autoplay muted>
+							  <source src="video/ReliveGardetta.mp4" type="video/mp4">
+							</video>			
+						</div>
+						</div>
+					  </div>
+
+					</div>
+						<br>
+					<br><br>
+					<div class="progress" id="progress4">
+					
+						  <div class="progress-bar progress-bar-striped progress-bar-danger salitaTesto" role="progressbar" aria-valuenow="90"
+						  aria-valuemin="0" aria-valuemax="100" style="width:90%">
+							Salita
+						  </div>
+						</div>
+						<div class="progress" id="progress5">
+						  <div class="progress-bar progress-bar-striped progress-bar-success difficoltaTecnicaSalitaTesto" role="progressbar" aria-valuenow="50"
+						  aria-valuemin="0" aria-valuemax="100" style="width:50%">
+							Difficoltà tecnica in salita
+						  </div>
+						</div>
+						<div class="progress" id="progress6">
+						  <div class="progress-bar progress-bar-striped progress-bar-warning difficoltaTecnicaDiscesaTesto" role="progressbar" aria-valuenow="80"
+						  aria-valuemin="0" aria-valuemax="100" style="width:80%">
+							Difficoltà tecnica discesa
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="container text-center dark-bg short-section">
+				<div class="row">
+					<div class="col-md-3 mb-sm-30">
+						<div class="counter-item">
+							<h2 data-count="30,9">35,8</h2>
+							<h6>Km</h6>
+						</div>
+					</div>
+					<div class="col-md-3 mb-sm-30">
+						<div class="counter-item">
+							<h2 data-count="1000">1.540m</h2>
+							<h6 class="salitaTesto">Salita</h6>
+						</div>
+					</div>
+					<div class="col-md-3 mb-sm-30">
+						<div class="counter-item">
+							<h2 data-count="1540">1.540m</h2>
+							<h6 class="discesaTesto">Discesa</h6>
+						</div>
+					</div>
+					<div class="col-md-3 mb-sm-30">
+						<div class="counter-item">
+							<h2 data-count="100">100%</h2>
+							<h6 class="divertimentoTesto">Divertimento</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+			
+		<section id="photo" class="light-bg">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="intro-text intro-lead-in">
+						<h2 id="fotoQuote">Una foto non scattata è un ricordo che non c’è!<br>Ricordati di ricordare!</h2><br>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item"  onclick="openInModal(this)">
+						<figure class="effect-bubba">
+							<img src="images/fremoup169.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Fremo Cuncunà</h2>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item"  onclick="openInModal(this)">
+						<figure class="effect-bubba">
+							<img src="images/croce.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Panorama</h2>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4"   >
+					<div class="ot-portfolio-item"  onclick="openInModal(this)">
+						<figure class="effect-bubba" >
+							<img src="images/picnic.jpg" alt="img02" class="img-responsive"/>
+							<figcaption>
+								<h2>PIC-NIC</h2>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+			</div>
+			<div class="row">
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item"  onclick="openInModal(this)">
+						<figure class="effect-bubba">
+							<img src="images/meya.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Rocca la Meya</h2>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item"  onclick="openInModal(this)">
+						<figure class="effect-bubba">
+							<img src="images/santamaria.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Santa Maria di Morinesio</h2>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4">
+					<div class="ot-portfolio-item"  onclick="openInModal(this)">
+						<figure class="effect-bubba">
+							<img src="images/nuvole.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>CLOUDS</h2>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+			</div>
+			<div class="row col-md-12"><p id="videoFotoTesto">Video e foto di Nicolò Mandrile e Roberto Brunetti (<a href="http://www.bikemood.it/" target="_blank">www.bikemood.it</a>)</p></div>
+
+			</div><!-- end container -->
+		</section>
+			<section id="info" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="">
+							<h2 id="infoTitolo">INFO E COSTI</h2>
+							<p id="infoTour">Il tour catalogati come “difficili”, prevedono salite e discese fisicamente impegnative e richiedono una certa abilità, presentando inoltre alcuni tratti tecnici
+								ed esposti in single track che richiedono una buona tecnica di guida ed una certa esperienza. 
+								Per i tour catalogati come "facili" non ci sono particolari difficoltà tecniche, ma, essendo in montagna è comunque necessario l'utilizzo di una E-MTB se non si è particolarmente allenati.
+								Necessario l’utilizzo di una MTB o E-MTB, preferibilmente full suspended in ottime condizioni. 
+								Obbligatorio l’utilizzo del casco, guanti, occhialini da ciclismo e zaino. 
+								Saremo in alta montagna, necessario un abbigliamento adeguato, a cipolla, per ripararsi dal freddo ed eventualmente dalla pioggia!</p>
+						</div>
+							<p id="infoCosti">Prezzo “All Inclusive” a persona comprensivo di:
+								<br>-	Pranzo “pic nic gourmet” del primo giorno; 
+								<br>-	Cena del primo giorno  (bevande escluse), notte in agriturismo comprensiva di colazione . 
+								<br>-	Pranzo del secondo giorno presso il Rifugio “La Gardetta” (bevande escluse).
+								<br>-	Guida di MTB per entrambi i giorni.
+													  <h2>250 €</h2></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact"  class="light-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="">
+							<h2 id="contattiTitolo">Contattaci</h2>
+							<p id="testoContatti">Ecco i nostri contatti per prenotazioni ed ulteriori informazioni!</p><br>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="profile-card-4 text-center"><img src="images/verde1.jpg" class="img img-responsive">
+							<div class="profile-content">
+								<div class="profile-name ">Nicolò Mandrile
+								   
+								</div>
+								<div class="profile-description">
+								<p class="nicoloTesto">Nato e cresciuto in Valle Maira, è accompagnatore cicloturistico dal 2018 e maestro di MTB dal 2021 con  <a href="http://www.amibike.com" target="_blank">AmiBike</a></p>
+
+								<p><i class="fa fa-phone"></i> +39 3343332773</p>
+											<p><i class="fa fa-envelope"></i> nicolo.mandrile@gmail.com</p></div>
+											
+											 <div class="profile-icons">
+											 <a href="https://www.facebook.com/nicolo.mandrile/" target="_blank"><i class="fa fa-facebook"></i></a>
+											 <a href="https://www.strava.com/athletes/13916302" target="_blank"><i class="fab fa-strava"></i></a>
+											 <a href="https://www.instagram.com/nicolomandrile/" target="_blank"><i class="fa fa-instagram"></i></a></div>
+						</div>
+							   
+							</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="profile-card-4 text-center"><img src="images/alpesdoc.jpg" class="img img-responsive">
+							<div class="profile-content">
+								<div class="profile-name">Alpes D'Oc Morinesio</div>
+								<div class="profile-description">
+								<p>Agriturismo a Morinesio (Stroppo)	</p>
+
+								<p><i class="fa fa-address-card"></i><a style="text-decoration:none;" target="_blank" href=" http://www.alpesdoc.com/it/"> http://www.alpesdoc.com/it/</a></p>
+								<p><i class="fa fa-phone"></i>+39 3487469019  +39 3489047499 +39 011597602</p>
+											<p><i class="fa fa-envelope"></i> morinesio@alpesdoc.com</p></div>
+											 <div class="profile-icons">
+											 <a href="https://www.facebook.com/AlpesdOCMorinesio" target="_blank"><i class="fa fa-facebook"></i></a>
+											 <a href="https://www.instagram.com/alpes_doc_morinesio/" target="_blank"><i class="fab fa-instagram"></i></a></div>
+							</div>
+						</div>
+							
+					</div>	
+					<div class="col-md-4">
+						<div class="profile-card-4 text-center"><img src="images/ufficioturistico.jpg" class="img img-responsive">
+							<div class="profile-content">
+								<div class="profile-name ufficioTuristicoTitolo">Ufficio turistico Acceglio</div>
+
+								<div class="profile-description">
+
+								<p class="ufficioTuristicoTesto">Ufficio turistico per informazioni e noleggio E-MTB</p>
+
+								<p><i class="fa fa-address-card"></i><a style="text-decoration:none;" target="_blank" href=" https://www.vallemaira.org/"> www.vallemaira.org</a></p>
+
+											<p><i class="fa fa-phone"></i> +39 0171 917080</p>
+
+											<p><i class="fa fa-envelope"></i> consorzio@vallemaira.org</p></div>
+											
+											 <div class="profile-icons">
+											 <a href="https://www.facebook.com/consorziovallemaira" target="_blank"><i class="fa fa-facebook"></i></a>
+											 <a href="https://www.instagram.com/visitvallemaira_official/" target="_blank"><i class="fa fa-instagram"></i></a></div>
+						</div>
+							   
+							</div>
+					</div>					
+				</div>
+					<br>
+					<div class="row">
+
+					<div class="col-sm-12 ">
+					 <div class="center" id="map"></div>
+					 		    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBroyqU0hX2wdbuvXjzYktdYkJdQU5wzcg&callback=initMap&libraries=&v=weekly&channel=2" async></script>
+					 </div>
+
+					 </div>
+
+			</div>
+		</section>
+		<p id="back-top">
+			<a href="#top"><i class="fa fa-angle-up"></i></a>
+		</p>
+		<footer>
+			<div class="container text-center">
+				<p id="nav-text-hidden">VALLE MAIRA <span class="text-warning"> MON AMOUR </span></p>
+			</div>
+		</footer>
+
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal" onclick="dismissModal()"  style="z-index:1000";>
+
+		  <!-- Modal Content (The Image) -->
+		  <img class="modal-content-image img-responsive" id="modalImage" onclick="dismissModal()">
+
+		  <!-- Modal Caption (Image Text) -->
+		  <div id="caption"></div>
+		</div>
+
+		<!-- Bootstrap core JavaScript
+			================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/lang.js"></script>
+		<script src="js/theme-scripts.js"></script>
+
+		<script>
+
+
+$( document ).ready(function() {
+
+
+    //Init lang
+   changeLanguage('it');
+   manageScroll();
+   initMap();
+   
+   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+     $("#myCarousel1").carousel('start');
+     $("#myCarousel2").carousel('start');
+    }
+
+});
+
+		</script>
+
+	</body>
+</html>
